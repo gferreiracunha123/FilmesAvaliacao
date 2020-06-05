@@ -1,0 +1,5 @@
+<div class="text-center" *ngIf="!hasMore; else messageTemplate">
+    <button class="btn btn-primary">{{name}}</button>
+</div>
+<ng-template #messageTemplate>
+</ng-template>

@@ -1,0 +1,19 @@
+<ol style="margin-top: 4%;" class="list-unstyled">
+  <li *ngFor="let cols of rows" class="row no-gutters">
+    <div *ngFor="let filme of cols" class="col-4 " apDarkenOnHover>
+
+      <ap-card>
+        <div class="text-center">
+          <app-filme [description]="filme.Title"
+                     url="https://www.folhape.com.br/obj/11/295170,475,80,0,0,475,365,0,0,0,0.jpg"></app-filme>
+        </div>
+        <div class="text-center">
+          <b>{{filme.Title}} -  {{filme.Year}}</b>
+        </div>
+      </ap-card>
+    </div>
+  </li>
+</ol>
+<p class="text-center text-muted" *ngIf="!filmes.length">
+    filme não encontrado
+</p>

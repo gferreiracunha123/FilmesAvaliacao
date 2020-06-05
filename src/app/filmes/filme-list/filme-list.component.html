@@ -1,0 +1,16 @@
+Pagina : <b>{{currentPage}}</b>
+<div class="card" class="text-center" style="width: 80rem;">
+  <img class="card-img-top" height="50"
+       src="https://sjsattler.files.wordpress.com/2012/03/ibm-logo.jpg?w=450"
+       alt="Card image cap">
+  <div class="card-body" style="margin-left: 5%;background: #fbfbfb;">
+    <app-search (onTyping)="filter=$event" [value]="filter"></app-search>
+    <app-load-button style="width: 10%;" (click)="load(filter)" [hasMore]="hasMore" [name]="name1"></app-load-button>
+    <app-load-button style=" float:left ; margin-left: 44px;" (click)="previous(filter)" [hasMore]="hasMore"
+                     [name]="name3"></app-load-button>
+    <app-load-button style=" float: right; margin-right: 44px;" (click)="next(filter)" [hasMore]="hasMore"
+                     [name]="name2"></app-load-button>
+    <app-filmes apDarkenOnHover [filmes]="filmes"></app-filmes>
+  </div>
+</div>
+
